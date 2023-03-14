@@ -2,8 +2,9 @@ package fr.letutour.feature.models;
 
 import java.util.Objects;
 
-public record NaturalSatellite(String name) implements Celestial{
-    public NaturalSatellite{
+public record HumanMadeSatellite(String name) implements Celestial{
+
+    public HumanMadeSatellite{
         Objects.requireNonNull(name);
     }
 }

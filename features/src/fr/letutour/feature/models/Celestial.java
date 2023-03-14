@@ -1,4 +1,4 @@
 package fr.letutour.feature.models;
 
-public sealed interface Celestial permits Planet, Star, NaturalSatellite {
+public sealed interface Celestial permits HumanMadeSatellite, NaturalSatellite, Planet, Star {
 }

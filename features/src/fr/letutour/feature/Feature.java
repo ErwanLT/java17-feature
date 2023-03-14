@@ -1,10 +1,7 @@
 package fr.letutour.feature;
 
 import fr.letutour.feature.matching.CelestialMatching;
-import fr.letutour.feature.models.Celestial;
-import fr.letutour.feature.models.NaturalSatellite;
-import fr.letutour.feature.models.Planet;
-import fr.letutour.feature.models.Star;
+import fr.letutour.feature.models.*;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -17,16 +14,21 @@ public class Feature {
 
     public static void main(String[] args) {
 
-        List<Celestial> solarSystem = new ArrayList<>();
-
         Star sun = new Star("Sun");
 
+        Planet mercury = new Planet("Mercury", new ArrayList<>());
+        Planet venus = new Planet("Venus", new ArrayList<>());
 
         NaturalSatellite moon = new NaturalSatellite("Moon");
-        Planet earth = new Planet("Earth", Arrays.asList(moon));
+        Planet earth = new Planet("Earth", List.of(moon));
 
-        solarSystem.add(sun);
-        solarSystem.add(earth);
+        NaturalSatellite phobos = new NaturalSatellite("Phobos");
+        NaturalSatellite deimos = new NaturalSatellite("Deimos");
+        Planet mars = new Planet("Mars", List.of(phobos, deimos));
+
+        HumanMadeSatellite hubble = new HumanMadeSatellite("Hubble");
+
+        List<Celestial> solarSystem = List.of(sun, mercury, venus, earth, mars, hubble);
 
         for (Celestial c : solarSystem) {
             matching.matching(c);

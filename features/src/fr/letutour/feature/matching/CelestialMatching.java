@@ -10,10 +10,10 @@ public class CelestialMatching {
     public void matching(Celestial celestial){
 
         switch (celestial) {
-            case NaturalSatellite ns -> System.out.println(ns.toString());
-            case Star s -> System.out.println(s.toString());
-            case Planet p -> System.out.println(p.toString());
-            default -> throw new IllegalStateException("Unexpected value: " + celestial);
+            case NaturalSatellite ns -> System.out.println(ns);
+            case Star s -> System.out.println(s);
+            case Planet p -> System.out.println(p);
+            default -> throw new IllegalStateException("This is not a natural celestial : " + celestial);
         }
     }
 }
