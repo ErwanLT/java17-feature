@@ -13,7 +13,7 @@ public class CelestialMatching {
             case NaturalSatellite ns -> System.out.println(ns);
             case Star s -> System.out.println(s);
             case Planet p -> System.out.println(p);
-            default -> throw new IllegalStateException("This is not a natural celestial : " + celestial);
+            default -> System.out.println("This is not a natural celestial : " + celestial);
         }
     }
 }

@@ -33,6 +33,16 @@ public class Feature {
         for (Celestial c : solarSystem) {
             matching.matching(c);
         }
+        System.out.println("=================");
+
+        String textBloc = """
+                {
+                    "name":"Solar system",
+                    "numberOfPlanet":"8"
+                }
+                """;
+
+        System.out.println(textBloc);
 
     }
 }
